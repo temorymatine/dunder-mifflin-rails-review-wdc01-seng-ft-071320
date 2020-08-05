@@ -1,0 +1,11 @@
+<h1> <%= "#{@employee.first_name} " + "#{@employee.last_name}" %> </h1>
+<ul>
+<div><%= @employee.alias %></div>
+<div><%= @employee.title %></div>
+<div><%= @employee.office %></div>
+<div><%= @employee.dog.dog_name %></div>
+</ul>
+
+<div> <%= link_to "Edit", edit_employee_path(@employee)%></div>
+
+

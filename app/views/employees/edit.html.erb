@@ -1,0 +1,16 @@
+<h1> Edit A Emp </h1>
+
+<%= form_for @employee, :url =>{:action => "update", :id =>@employee} do |f| %>
+
+<p>First Name: <%= f.text_field 'first_name' %></p>
+<p>Last Name: <%= f.text_field  'last_name' %></p>
+<p>Alias: <%= f.text_field 'alias' %></p>
+<p>Title: <%= f.text_field  'title' %></p>
+<p>Office: <%= f.text_field 'office' %></p>
+<p>Dog: <%= f.collection_select :dog_id, Dog.all, :id, :name %></p>
+<p>Image Url: <%= f.text_field  'img_url' %></p>
+
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>
